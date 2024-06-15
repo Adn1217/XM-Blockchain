@@ -43,7 +43,7 @@ abstract contract ERC721URIStorage is IERC4906, ERC721 {
         }
         // If both are set, concatenate the baseURI and tokenURI (via string.concat).
         if (bytes(_tokenURI).length > 0) {
-            return string.concat(base, _tokenURI);
+            return string.concat(base, _tokenURI, ".json");
         }
 
         return super.tokenURI(tokenId);
