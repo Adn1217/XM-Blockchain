@@ -1023,11 +1023,11 @@
 			]
 		},
 		"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
-			"keccak256": "0x69c596b19ed20d270501f9ba2f0b3920a0fab53240f00d0ca1d28668371350db",
+			"keccak256": "0x949e0179b4e8854105fe9b383e5b91c9b587f25e8aa520ea5e6d9687934bd0c7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f59d150861fb59950cfc85ac82aa1f5a5d84a7b4c539804cc40bbe57acfb9b26",
-				"dweb:/ipfs/QmPGRLAxSbFoiNdAcF3uQ2sJznGDYgcBamgX5ASpsdtavT"
+				"bzz-raw://3085dff3909ac8ea7336c1d29d008ef92ccaaf4cbe403ca4442de00b03771a76",
+				"dweb:/ipfs/QmUZgYfNik8WveJk59CjFkoGD81ZBfz4sqitTCFAYDRUtv"
 			]
 		},
 		"@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol": {
