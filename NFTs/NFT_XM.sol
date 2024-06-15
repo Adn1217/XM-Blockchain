@@ -9,13 +9,17 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 
-contract MyToken is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Pausable, Ownable, ERC721Burnable {
+contract XMToken is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
         ERC721("XMToken", "XMT")
         Ownable(msg.sender)
     {}
+
+    function _baseURI() internal pure override returns (string memory) {
+        return "ipfs://QmVS2AJ5sLgUC2J5UCHpkMNa3dmFt7VyzefhVNXJ2C2Z2A/";
+    }
 
     function pause() public onlyOwner {
         _pause();
