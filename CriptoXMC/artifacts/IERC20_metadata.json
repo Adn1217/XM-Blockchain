@@ -87,11 +87,11 @@
 	},
 	"sources": {
 		"CriptoXMC/transfer.sol": {
-			"keccak256": "0x0eb0adbd85688a2a0b75356cfd75df26cc4ba663cca84ee001baac64ba097123",
+			"keccak256": "0xa7fe274c9755e6c53d831d6837be9ae9184e9a12cf4e9a1155f25826215cef92",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a7e85aebad33d8bca07222dda1f73508ea8d7dea7f5317b6c63d3d60370a41ec",
-				"dweb:/ipfs/QmZry2us53nTqSwLutAPfPz3Zn9zhd3JLyy9bakoFkjh4b"
+				"bzz-raw://3cbb3d83e57002d4342ed29847f2130ecf9c81593641b86a8decf517cb1829dc",
+				"dweb:/ipfs/QmTUYGYFbErjw2jBDMCqNE3UALEhfbMSBSjFjWA2bAwXHW"
 			]
 		}
 	},

@@ -1,6 +1,6 @@
 {
   "name": "MainXM",
-  "address": "0x56a2777e796eF23399e9E1d791E1A0410a75E31b",
+  "address": "0x4815A8Ba613a3eB21A920739dE4cA7C439c7e1b1",
   "abi": [
     {
       "inputs": [
@@ -106,5 +106,5 @@
     }
   ],
   "filePath": "XM_Blockchain/CriptoXMC/transfer.sol",
-  "pinnedAt": 1721255263645
+  "pinnedAt": 1721257956700
 }

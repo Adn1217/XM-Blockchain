@@ -26,11 +26,11 @@ contract MainXM {
     }
 
     mapping (uint256 => uint256) public transfers;
-    function deposit(
+    function deposit (
         address _sender,
         uint256 _amount,
         uint256 _idTrx // Id de transacción.
-    ) external {
+    ) onlyOwner external {
         bool transferSuccess = token.transferFrom(
             _sender,
             address(this), // Dirección de este contrato.
