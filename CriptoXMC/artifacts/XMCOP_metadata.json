@@ -11,6 +11,11 @@
 						"internalType": "address",
 						"name": "initialOwner",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "initialAmount",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -1096,11 +1101,11 @@
 			]
 		},
 		"CriptoXMC/XMCOP.sol": {
-			"keccak256": "0xee9bf4a1d677c33675004eea3129093d06d4c45308c879e91d87251265fa5668",
+			"keccak256": "0xa639dc0cf2c23129d2ede52b30863336495d43dd11e61b6a1865034615cf948a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://50eef3f1aa57a7854f9b807a3fc7bd10e49d364e5bca4aba0549774ff1121195",
-				"dweb:/ipfs/QmahbkkM5ydCZ3N5vQEffPKEQRKgHV8TFohYT4LsxJMExR"
+				"bzz-raw://eb756b6d423fe74ff012377708614e6d8706a3476fe1f8471c2baa31cf0fb83b",
+				"dweb:/ipfs/QmeLKtrtytrGrwZVKFbL1dU48rWCzgLvaR1NuxMedjebae"
 			]
 		}
 	},

@@ -14,10 +14,12 @@ interface IERC20 {
 contract MainXM {
     IERC20 public token; // Token tipo IERC20, banco o "XMCOP".
     address public owner;
+    address public withdrawalOwner;
 
-    constructor(address _token, address initialOwner) {
+    constructor(address _token, address initialOwner, address withdrawalInitialOwner) {
         owner = initialOwner;
         token = IERC20(_token); // Se inicializa variable Token (direción del contrato).
+        withdrawalOwner = withdrawalInitialOwner; // Solo este usuario puede retirar saldo.
     }
 
     modifier onlyOwner(){
@@ -25,12 +27,20 @@ contract MainXM {
         _;
     }
 
-    mapping (uint256 => uint256) public transfers;
+    modifier onlyWithdrawalOwner(){
+        require(msg.sender == withdrawalOwner, "Only withdrawal owner");
+        _;
+    }
+
+    mapping (string => uint256) public transfers;
+    mapping (string => string) public signatures;
+
     function deposit (
         address _sender,
         uint256 _amount,
-        uint256 _idTrx // Id de transacción.
-    ) onlyOwner external {
+        string calldata _idTrx, // Id de transacción.
+        string calldata _signature // Firma de usuario.
+    ) external onlyOwner {
         bool transferSuccess = token.transferFrom(
             _sender,
             address(this), // Dirección de este contrato.
@@ -38,9 +48,10 @@ contract MainXM {
         );
     require(transferSuccess, "Transfer to contract failed");
         transfers[_idTrx] = _amount;
+        signatures[_idTrx] = _signature;
     }
 
-    function withdraw (address _receiver, uint256 _amount) public onlyOwner {
+    function withdraw (address _receiver, uint256 _amount) public onlyWithdrawalOwner {
         bool transferSuccess = token.transfer(_receiver, _amount);
         require(transferSuccess, "Transfer to user failed");
     }

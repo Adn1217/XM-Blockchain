@@ -9,12 +9,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 contract XMCOP is ERC20, ERC20Burnable, ERC20Pausable, Ownable, ERC20Permit {
-    constructor(address initialOwner)
+    constructor(address initialOwner, uint256 initialAmount)
         ERC20("XMCOP", "XMC")
         Ownable(initialOwner)
         ERC20Permit("XMCOP")
     {
-        _mint(msg.sender, 10000000 * 10 ** decimals());
+        _mint(msg.sender, initialAmount * 10 ** decimals());
     }
 
     function pause() public onlyOwner {

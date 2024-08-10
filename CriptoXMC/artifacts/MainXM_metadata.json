@@ -16,6 +16,11 @@
 						"internalType": "address",
 						"name": "initialOwner",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "withdrawalInitialOwner",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -34,9 +39,14 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "_idTrx",
-						"type": "uint256"
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_signature",
+						"type": "string"
 					}
 				],
 				"name": "deposit",
@@ -58,6 +68,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "signatures",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "token",
 				"outputs": [
@@ -73,9 +102,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"name": "transfers",
@@ -105,6 +134,19 @@
 				"name": "withdraw",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawalOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -136,11 +178,11 @@
 	},
 	"sources": {
 		"CriptoXMC/transfer.sol": {
-			"keccak256": "0xa7fe274c9755e6c53d831d6837be9ae9184e9a12cf4e9a1155f25826215cef92",
+			"keccak256": "0x6f69c3b9e33ddb23b4ec107dc26070610f40ef63b2ce6ac5ad8716fc40c4345c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3cbb3d83e57002d4342ed29847f2130ecf9c81593641b86a8decf517cb1829dc",
-				"dweb:/ipfs/QmTUYGYFbErjw2jBDMCqNE3UALEhfbMSBSjFjWA2bAwXHW"
+				"bzz-raw://66fa5e85924262b8c97f61fb92b51151332b29557a53ef863f315325af2f869e",
+				"dweb:/ipfs/QmewR4F5mdfZtQ8DC2V31HAfQwX2xh5fTJ3aHSRMa7bePa"
 			]
 		}
 	},
