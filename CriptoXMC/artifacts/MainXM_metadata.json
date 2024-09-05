@@ -27,6 +27,19 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "ack",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -178,11 +191,11 @@
 	},
 	"sources": {
 		"CriptoXMC/transfer.sol": {
-			"keccak256": "0x6f69c3b9e33ddb23b4ec107dc26070610f40ef63b2ce6ac5ad8716fc40c4345c",
+			"keccak256": "0x4af54a783ec5331f1b3d588fbb8750fec3d52d4af92f35efed89824f924e299f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://66fa5e85924262b8c97f61fb92b51151332b29557a53ef863f315325af2f869e",
-				"dweb:/ipfs/QmewR4F5mdfZtQ8DC2V31HAfQwX2xh5fTJ3aHSRMa7bePa"
+				"bzz-raw://99f6fd422f89682fd277c6c0148d343edd02772d09d438b2296dce6f2a2c7165",
+				"dweb:/ipfs/QmP8R9pFWcoQLdRAUwdkDkSnmkYSA9mc5JFUoQBUy3uhSu"
 			]
 		}
 	},

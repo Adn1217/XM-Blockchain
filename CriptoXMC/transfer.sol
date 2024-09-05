@@ -15,10 +15,11 @@ contract MainXM {
     IERC20 public token; // Token tipo IERC20, banco o "XMCOP".
     address public owner;
     address public withdrawalOwner;
+    event ack(string message);
 
     constructor(address _token, address initialOwner, address withdrawalInitialOwner) {
         owner = initialOwner;
-        token = IERC20(_token); // Se inicializa variable Token (direción del contrato).
+        token = IERC20(_token); // Se inicializa variable Token (dirección del contrato de la criptomoneda a usar).
         withdrawalOwner = withdrawalInitialOwner; // Solo este usuario puede retirar saldo.
     }
 
@@ -49,10 +50,15 @@ contract MainXM {
     require(transferSuccess, "Transfer to contract failed");
         transfers[_idTrx] = _amount;
         signatures[_idTrx] = _signature;
+        //string memory _ackMessage = string(abi.encodePacked("se depositaron ", _amount, " exitosamente."));
+        string memory _ackMessage = string(abi.encodePacked("{function: deposit, amount: ", _amount,", status: Success}"));
+        emit ack(_ackMessage);
     }
 
     function withdraw (address _receiver, uint256 _amount) public onlyWithdrawalOwner {
         bool transferSuccess = token.transfer(_receiver, _amount);
         require(transferSuccess, "Transfer to user failed");
+        string memory _ackMessage = string(abi.encodePacked("{function: withdraw, receiver: ", _receiver, "amount: ", _amount,", status: Success}"));
+        emit ack(_ackMessage);
     }
 }
